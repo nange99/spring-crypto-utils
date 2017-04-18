@@ -1,0 +1,11 @@
+server:
+  type: simple
+  applicationContextPath: /api
+  connector:
+    type: http
+    port: 8080
+
+users:
+  - name: admin
+    email: admin@ca.local
+    roles: [admin, user]

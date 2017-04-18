@@ -36,9 +36,11 @@ public class Base64EncodedMacImplTest {
         assertNotNull("mac", mac);
         final String message = Base64.encodeBase64String("Hello".getBytes());
         final String digest = mac.digest(message);
+        System.out.println("mac.digest===="+digest);
         assertNotNull("digest", digest);
         assertTrue("digest.length() > 0", digest.length() > 0);
         final String digest2 = mac.digest(message);
+        System.out.println("mac.digest2===="+digest2);
         assertNotNull("digest2", digest);
         assertTrue("digest2.length() > 0", digest.length() > 0);
         assertEquals("digests", digest, digest2);

@@ -36,6 +36,7 @@ public class SecretKeyFactoryBeanTest {
     @Test
     public void testInvalidAlias() throws NoSuchAlgorithmException, UnrecoverableEntryException, KeyStoreException {
         assertNotNull("key", key);
+        System.out.println("key.getAlgorithm()====="+key.getAlgorithm());
         assertEquals("algorithm", "HmacSHA1", key.getAlgorithm());
     }
 

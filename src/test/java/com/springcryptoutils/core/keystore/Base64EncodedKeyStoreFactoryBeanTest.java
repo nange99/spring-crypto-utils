@@ -36,6 +36,7 @@ public class Base64EncodedKeyStoreFactoryBeanTest {
     @Test
     public void testKeyStoreIsProperlyLoaded() {
         assertNotNull(keyStore);
+        System.out.println(keyStore.getType());
         assertEquals("keyStoreType", "JKS", keyStore.getType());
     }
 

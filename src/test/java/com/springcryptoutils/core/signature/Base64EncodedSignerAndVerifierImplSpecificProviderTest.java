@@ -55,7 +55,9 @@ public class Base64EncodedSignerAndVerifierImplSpecificProviderTest {
     @Test
     public void testSignAndVerify() {
         String signature = signer.sign(message);
+        System.out.println("signature===="+signature);
         assertNotNull(signature);
+        System.out.println("signature===="+verifier.verify(message, signature));
         assertTrue(verifier.verify(message, signature));
     }
 

@@ -1,0 +1,14 @@
+*html #kefu1 { /*--IE6 Hack - Fixed Positioning to the Bottom--*/
+	margin-top: 50px; /*--Prevents IE6 from having an infinity scroll bar - due to 1px border on #footpanel--*/
+	position: absolute;
+	top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop+50 : document.body.scrollTop +50);
+}
+
+#kefu1{position:fixed; right:0px; top:80px; z-index:10008; width: 132px; padding: 10px; background: #fff; border: 1px solid #ddd; box-shadow: 1px 1px 1px #d4d4d4; font-size: 12px;}
+.cs_tel{height:25px; background: url('img.gif?v=1') no-repeat 0px 0px;}
+.cs_tel_ct{color: #666; line-height: 150%;}
+.cs_tel_num{color: #c00; font-size: 18px; font-family: Arial,Verdana; font-style: italic; font-weight: bold; display: block; padding: 5px 0px;}
+
+.cs_free{height:32px; background: url('img.gif?v=1') no-repeat 0px -100px;}
+.cs_free a{display: block; height: 32px;}
+.cs_free a span{display: none;}

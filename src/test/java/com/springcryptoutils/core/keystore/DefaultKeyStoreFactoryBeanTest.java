@@ -17,11 +17,7 @@ package com.springcryptoutils.core.keystore;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.security.KeyStore;
 
@@ -43,6 +39,7 @@ public class DefaultKeyStoreFactoryBeanTest {
     @Test
     public void testKeyStoreIsProperlyLoaded() {
         KeyStore keyStore = ctx.getBean(KeyStore.class);
+        System.out.println(keyStore.getType());
         assertNotNull(keyStore);
         assertEquals("keyStoreType", "JKS", keyStore.getType());
     }
